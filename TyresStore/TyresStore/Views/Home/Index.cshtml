@@ -1,5 +1,27 @@
-﻿@{
+﻿@model IList<TyresStore.Repository.Models.Vehicle>
+
+@{
     ViewBag.Title = "Home Page";
+}
+
+@foreach (var vehicle in Model)
+{
+    <div>
+        @vehicle.Manufacturer
+    </div>
+    <div>
+        @vehicle.Model
+    </div>
+    <div>
+        @vehicle.Year
+    </div>
+    <div>
+        @vehicle.Color
+    </div>
+    <div>
+        @vehicle.ID
+    </div>
+    <hr />
 }
 
 <div class="jumbotron">
