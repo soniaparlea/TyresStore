@@ -17,7 +17,7 @@ namespace TyresStore.Repository.Models
         public int Year { get; set; }
 
         public string Color { get; set; }
-
+                
         public virtual ICollection<Tyre> Tyres { get; set; }
     }
 }
