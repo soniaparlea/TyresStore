@@ -11,12 +11,16 @@ namespace TyresStore.Repository
         }
 
         public DbSet<Tyre> Tyres { get; set; }
+
         public DbSet<Vehicle> Vehicles { get; set; }
+
+        public DbSet<Basket> BasketItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
 
         public override int SaveChanges()
         {

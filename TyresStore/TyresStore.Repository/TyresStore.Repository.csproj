@@ -47,13 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasketRepository.cs" />
+    <Compile Include="Interfaces\IBasketRepository.cs" />
     <Compile Include="Interfaces\ITyresRepository.cs" />
     <Compile Include="Interfaces\IVehiclesRepository.cs" />
     <Compile Include="Migrations\201802261424055_InitialCreate.cs" />
     <Compile Include="Migrations\201802261424055_InitialCreate.Designer.cs">
       <DependentUpon>201802261424055_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803070706171_migraredoi.cs" />
+    <Compile Include="Migrations\201803070706171_migraredoi.Designer.cs">
+      <DependentUpon>201803070706171_migraredoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Basket.cs" />
     <Compile Include="Models\Tyre.cs" />
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +94,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201802261424055_InitialCreate.resx">
       <DependentUpon>201802261424055_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803070706171_migraredoi.resx">
+      <DependentUpon>201803070706171_migraredoi.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,33 @@
+﻿@model IList<TyresStore.Repository.Models.Basket>
+
+@if (Model.Count > 0)
+{
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>TyreId</th>
+                    <th>Description</th>
+                    <th>Date added</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.TyreId</td>
+                        <td>@item.Description</td>
+                        <td>@item.AddedDate</td>
+                        <td class="delete-item">
+                            <button type="button" class="btn btn-primary update-cart-button" onclick="basketModel.deleteItem(@item.ID)">
+                                Delete Item
+                                <span class="glyphicon glyphycon-remove"></span>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+

@@ -12,6 +12,7 @@ namespace TyresStore.Controllers
     {
         VehiclesRepository vehiclesRepo = new VehiclesRepository();
         TyresRepository tyresRepo = new TyresRepository();
+        BasketRepository BasketRepo = new BasketRepository();
 
         public ActionResult Index()
         {
@@ -46,7 +47,41 @@ namespace TyresStore.Controllers
             }
         }
 
-       
+       public ActionResult AddTyreToBasket(int tyreId, string description)
+        {
+            bool tyreAdded = BasketRepo.TyreAlreadyAdded(tyreId);
+
+            if (!tyreAdded)
+                BasketRepo.StoreTyre(tyreId, description);
+
+            return Json(new { exists = tyreAdded });
+        }
+
+        public ActionResult GetBasketItems()
+        {
+            return Json(BasketRepo.GetItems(), JsonRequestBehavior.AllowGet);
+        }
+
+        public string GetBasketHtml()
+        {
+            List<Basket> basket = BasketRepo.GetItems();
+
+            string ret = RenderPartialViewToString("~/Views/Home/Basket.cshtml", basket);
+
+            return ret;
+        }
+
+        public string RemoveItemFromBasket(int itemId)
+        {
+            BasketRepo.RemoveItem(itemId);
+
+            List<Basket> basket = BasketRepo.GetItems();
+
+            string ret = RenderPartialViewToString("~/Views/Home/Basket.cshtml", basket);
+
+            return ret;
+
+        }
 
         public ActionResult About()
         {
