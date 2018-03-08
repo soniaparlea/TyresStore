@@ -20,6 +20,7 @@ namespace TyresStore.Repository
             Basket item = new Basket();
           
             item.Description = description;
+            item.TyreId = tyreId;
             item.AddedDate = new DateTime().ToShortDateString() + new DateTime().ToShortTimeString();
 
             tyresContext.BasketItems.Add(item);

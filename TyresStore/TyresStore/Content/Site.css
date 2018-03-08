@@ -33,31 +33,35 @@ textarea {
     background-color: black;
 }
 
+.vehicle-table {
+    width: 50% !important;
+}
+
 div.table {
     left: 10px;
     border-collapse: collapse;
-    display: inline-block;
-    width: 45% !important;
+    display: inline-block;    
     background-color: white;
     top: 100px;
 }
 
 div.tyre-table {
+    margin-right: 0;
     border-collapse: collapse;
     position: absolute;
     display: inline-block;
-    width: 40% !important;
-    background-color: white;
     
-
+    background-color: white;
 }
 
-.header-table{
+.header-table {
+    width: 50%;
     text-align: center;
     font-size: large;
 }
 
 .header-table-tyres {
+    width: 50%;
     background-color: white;
     text-align: center;
     font-size: large;
@@ -77,6 +81,16 @@ tr:hover {
     color: white;
 }
 
+    .footer.link {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        opacity: 0.3;
+        color: white;
+    }
+
 .header .shopping-cart {
     width: calc(15% - 20px);
     float:right;
@@ -93,3 +107,8 @@ tr:hover {
         z-index: 99999;
         height: 40px;
     }
+
+.header-table-tyres
+{
+    display: none;
+}

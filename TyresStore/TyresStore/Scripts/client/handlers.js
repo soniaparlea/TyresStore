@@ -8,6 +8,8 @@
     $(".tyre-table .table-content").html("");
     var htmlContent = tyresHtml;
 
+    $('.header-table-tyres').show();
+
     if (tyresHtml.length > 0)
         $(".tyre-table .table-content").append(htmlContent);
     else

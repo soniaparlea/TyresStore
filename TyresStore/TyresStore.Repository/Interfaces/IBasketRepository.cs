@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TyresStore.Repository.Models;
 
 namespace TyresStore.Repository.Interfaces
 {
@@ -10,10 +11,10 @@ namespace TyresStore.Repository.Interfaces
     {
         void StoreTyre(int tyreId, string description);
 
-       /* List<Basket> GetItems();
+        List<Basket> GetItems();
 
         bool TyreAlreadyAdded(int tyreId);
 
-        void RemoveItem(int itemId);*/
+        void RemoveItem(int itemId);
     }
 }
